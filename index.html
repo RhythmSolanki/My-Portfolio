@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rhythm Solanki — Freelance Web Developer. Modern, fast, conversion-focused websites for businesses, startups, and individuals.">
+  <title>Rhythm Solanki · Freelance Web Developer</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("rhythm-theme");
+        if (saved === "dark" || saved === "light") {
+          document.documentElement.setAttribute("data-theme", saved);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-name">Rhythm Solanki</span>
+        <span class="brand-role">Freelance Web Developer</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-header">Book A Call</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile" hidden>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn btn-primary">Book A Call</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-stage">
+          <div class="hero-intro">
+            <p class="hero-greeting">Hi! I'm</p>
+            <h1 id="hero-heading" class="hero-name">Rhythm Solanki</h1>
+            <p class="hero-tagline">
+              a <strong>freelance web developer</strong> building websites that turn visitors into customers.
+            </p>
+            <p class="hero-credits">freelance web developer · react &amp; vite · fast delivery · 100% secure</p>
+          </div>
+          <aside class="hero-interactive" aria-label="GitHub profile">
+            <div class="hero-interactive-slot" id="hero-interactive">
+              <div class="github-profile-card">
+                <div class="github-profile-top">
+                  <img
+                    class="github-avatar"
+                    src="https://github.com/RhythmSolanki.png?size=160"
+                    alt="Rhythm Solanki"
+                    width="80"
+                    height="80"
+                  >
+                  <div>
+                    <p class="github-eyebrow">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.71.4.08.55-.18.55-.4 0-.2-.01-.86-.01-1.56-2.01.38-2.53-.5-2.69-.96-.09-.24-.48-.96-.82-1.15-.28-.15-.68-.53-.01-.54.63-.01 1.08.59 1.23.83.72 1.24 1.87.89 2.33.68.07-.54.28-.9.51-1.11-1.78-.2-3.64-.91-3.64-4.02 0-.89.31-1.61.82-2.18-.08-.2-.36-1.03.08-2.15 0 0 .67-.22 2.2.83A7.49 7.49 0 0 1 8 4.91c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.83 2.2-.83.44 1.12.16 1.95.08 2.15.51.57.82 1.29.82 2.18 0 3.12-1.87 3.82-3.65 4.02.29.25.54.72.54 1.46 0 1.06-.01 1.91-.01 2.18 0 .22.15.48.55.4A8.02 8.02 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z"/>
+                      </svg>
+                      GitHub profile
+                    </p>
+                    <h2 class="github-name">Rhythm Solanki</h2>
+                    <p class="github-handle">@RhythmSolanki</p>
+                  </div>
+                </div>
+
+                <p class="github-bio">Coding…</p>
+
+                <div class="github-meta" aria-label="GitHub profile details">
+                  <span>Ajmer, India</span>
+                  <span>9 public repositories</span>
+                </div>
+
+                <div class="github-contributions">
+                  <div class="github-contributions-head">
+                    <p>Contribution activity</p>
+                    <span>Last year</span>
+                  </div>
+                  <p class="visually-hidden">GitHub contribution activity for Rhythm Solanki over the last year.</p>
+                  <div
+                    class="github-contribution-graph"
+                    aria-hidden="true"
+                    data-levels="38:0,1:4,2:0,1:2,52:0,1:4,52:0,1:3,49:0,1:3,22:0,1:2,32:0,1:2,19:0,1:4,75:0,1:4,19:0"
+                  ></div>
+                  <div class="github-legend" aria-hidden="true">
+                    <span>Less</span>
+                    <i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i>
+                    <span>More</span>
+                  </div>
+                </div>
+
+                <a class="github-link" href="https://github.com/RhythmSolanki" target="_blank" rel="noreferrer">
+                  View GitHub Profile <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="hero-details">
+          <p class="hero-headline">Websites That Turn Visitors Into Customers.</p>
+          <p class="lead">Modern, fast, conversion-focused websites built to help businesses generate more leads, build trust, and grow online.</p>
+          <p class="body-text">Your website is often the first impression customers have of your business. I build modern, high-performance websites that not only look great but are designed to attract customers, generate leads, and increase sales.</p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Book A Free Call</a>
+          </div>
+          <ul class="hero-stats" aria-label="Highlights">
+            <li><span class="hero-stat-label">React &amp; Vite</span></li>
+            <li><span class="hero-stat-label">Fast Delivery</span></li>
+            <li><span class="hero-stat-label">100% Secure</span></li>
+            <li><span class="hero-stat-value">5+</span> Projects Successfully Delivered</li>
+            <li><span class="hero-stat-value">100%</span> Client Satisfaction</li>
+            <li><span class="hero-stat-value">3–7 Days</span> Avg. Delivery Time</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- 
+  Work section
+-->
+    <section class="section section-work" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="work-heading" class="section-title">Selected Work</h2>
+        </header>
+
+        <div class="hover-img-container hover-img-work is-contained" id="workHover">
+          <div class="hover-img-projects">
+            <article class="work-block">
+              <div class="hover-img-project">
+                <h3 class="hover-img-project-title">PESHWA PAVILION</h3>
+                <p class="hover-img-project-label">Restaurant Website · 2026</p>
+              </div>
+              <div class="work-block-detail">
+                <p class="work-desc">A modern Indian restaurant blending rich heritage, contemporary design, and unforgettable flavors.</p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>Framer Motion</li>
+                  <li>Tailwind CSS</li>
+                  <li>EmailJS</li>
+                </ul>
+              </div>
+            </article>
+            <article class="work-block">
+              <div class="hover-img-project">
+                <h3 class="hover-img-project-title">GrowthxIQ SaaS</h3>
+                <p class="hover-img-project-label">SaaS Landing Page · 2026</p>
+              </div>
+              <div class="work-block-detail">
+                <p class="work-desc">A modern financial intelligence platform turning complex business data into clear, actionable growth insights.</p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>Vite</li>
+                  <li>GSAP</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </div>
+            </article>
+            <article class="work-block">
+              <div class="hover-img-project">
+                <h3 class="hover-img-project-title">Apex Law Firm</h3>
+                <p class="hover-img-project-label">Delhi High Court Law Firm · 2026</p>
+              </div>
+              <div class="work-block-detail">
+                <p class="work-desc">A professional legal practice delivering trusted, strategic counsel across complex legal matters.</p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>Tailwind CSS</li>
+                  <li>Vite</li>
+                  <li>Calendly</li>
+                </ul>
+              </div>
+            </article>
+            <article class="work-block">
+              <div class="hover-img-project">
+                <h3 class="hover-img-project-title">Elite Floor Realty</h3>
+                <p class="hover-img-project-label">Business website · 2026</p>
+              </div>
+              <div class="work-block-detail">
+                <p class="work-desc">Gurugram’s luxury real estate specialists, connecting clients with premium homes and investment opportunities.</p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>Calendly</li>
+                  <li>Tailwind CSS</li>
+                  <li>EmailJS</li>
+                </ul>
+              </div>
+            </article>
+            <article class="work-block">
+              <div class="hover-img-project">
+                <h3 class="hover-img-project-title">Fitness Theatre</h3>
+                <p class="hover-img-project-label">Business Website · 2026</p>
+              </div>
+              <div class="work-block-detail">
+                <p class="work-desc">A bold, high-energy fitness brand built to inspire movement, strength, and a healthier lifestyle.</p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>EmailJS</li>
+                  <li>Calendly</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </div>
+            </article>
+            <!-- <article class="work-block">
+              <div class="hover-img-project">
+                <h3 class="hover-img-project-title">The Circle</h3>
+                <p class="hover-img-project-label">Rich Networking club · 2026</p>
+              </div>
+              <div class="work-block-detail">
+                <p class="work-desc">An exclusive networking club connecting ambitious individuals through meaningful relationships, private experiences, and high-value opportunities.</p>
+                <ul class="tag-list">
+                  <li>React</li>
+                  <li>Three.js</li>
+                  <li>Framer Motion</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+            </article> -->
+          </div>
+
+          <div class="hover-img-thumbnail-wrapper" aria-hidden="true">
+            <div class="hover-img-thumbnail"><div class="work-image work-image--1"></div></div>
+            <div class="hover-img-thumbnail"><div class="work-image work-image--2"></div></div>
+            <div class="hover-img-thumbnail"><div class="work-image work-image--3"></div></div>
+            <div class="hover-img-thumbnail"><div class="work-image work-image--4"></div></div>
+            <div class="hover-img-thumbnail"><div class="work-image work-image--5"></div></div>
+            <!-- <div class="hover-img-thumbnail"><div class="work-image work-image--6"></div></div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <header class="section-header">
+          <h2 id="about-heading" class="section-title">Passionate about modern web development</h2>
+        </header>
+        <div class="about-body">
+          <p class="body-text">I'm Rhythm Solanki, a freelance web developer passionate about creating modern, responsive, and high-performing websites. I help businesses, startups, and individuals build a strong online presence through clean design, optimized performance, and reliable development.</p>
+          <p class="body-text">Every website I create is built with a focus on user experience, speed, scalability, and business growth. My goal isn't simply to create beautiful websites — it's to build digital experiences that help businesses attract customers and generate results.</p>
+          <ul class="about-stats">
+            <li>
+              <span class="stat-value">5+</span>
+              <span class="stat-label">Projects Done</span>
+            </li>
+            <li>
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Custom Built</span>
+            </li>
+            <li>
+              <span class="stat-value">24h</span>
+              <span class="stat-label">Response Time</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-philosophy" aria-labelledby="philosophy-heading">
+      <div class="container">
+        <blockquote class="pull-quote" id="philosophy-heading">
+          <p>"I don't just build websites — I craft digital experiences that help businesses attract customers and generate real results."</p>
+        </blockquote>
+        <ul class="principles-list">
+          <li>Conversion-focused design</li>
+          <li>Clean, modern code</li>
+          <li>Performance optimized</li>
+          <li>SEO-friendly structure</li>
+          <li>Business-first mindset</li>
+          <li>Ongoing support available</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-title section-title--sm">Skills</h2>
+        <ul class="skills-list">
+          <li class="skill-row">
+            <span class="skill-name">React / Vite</span>
+            <span class="skill-bar" style="--level: 95%"></span>
+            <span class="skill-pct">95%</span>
+          </li>
+          <li class="skill-row">
+            <span class="skill-name">Tailwind CSS</span>
+            <span class="skill-bar" style="--level: 92%"></span>
+            <span class="skill-pct">92%</span>
+          </li>
+          <li class="skill-row">
+            <span class="skill-name">UI/UX Design</span>
+            <span class="skill-bar" style="--level: 88%"></span>
+            <span class="skill-pct">88%</span>
+          </li>
+          <li class="skill-row">
+            <span class="skill-name">SEO &amp; Performance</span>
+            <span class="skill-bar" style="--level: 85%"></span>
+            <span class="skill-pct">85%</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-process" aria-labelledby="process-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="process-heading" class="section-title">Why Working Together Is Simple</h2>
+          <p class="section-sub">I've built a working process that prioritizes your time, money, and business outcomes above everything else.</p>
+        </header>
+        <ol class="process-list">
+          <li class="process-item">
+            <span class="process-num">01</span>
+            <h3 class="process-title">Fast Delivery &amp; On-Time Completion</h3>
+            <p class="body-text">I follow a structured workflow that ensures your project is delivered efficiently without compromising quality. You get results fast, and you get them right.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Structured Workflow</li>
+              <li>No Delays</li>
+              <li>Quality First</li>
+            </ul>
+          </li>
+          <li class="process-item">
+            <span class="process-num">02</span>
+            <h3 class="process-title">Hassle-Free Experience</h3>
+            <p class="body-text">I handle all the technical details so you can focus on running your business. From setup to launch, the entire process is smooth, transparent, and stress-free.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Full Technical Handling</li>
+              <li>Transparent Process</li>
+              <li>Stress-Free</li>
+            </ul>
+          </li>
+          <li class="process-item">
+            <span class="process-num">03</span>
+            <h3 class="process-title">Design &amp; User Experience</h3>
+            <p class="body-text">Every website is crafted with modern design principles and optimized for speed, security, accessibility, and performance — because first impressions matter.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Modern Design</li>
+              <li>Accessibility</li>
+              <li>Performance Optimized</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-benefits" aria-labelledby="benefits-heading">
+      <div class="container">
+        <h2 id="benefits-heading" class="visually-hidden">Core benefits</h2>
+        <ul class="benefits-list">
+          <li>
+            <h3 class="benefit-title">Conversion-Focused Design</h3>
+            <p class="body-text">Every layout, color, and call-to-action is strategically crafted to turn visitors into paying customers. No pretty-but-useless websites.</p>
+          </li>
+          <li>
+            <h3 class="benefit-title">Performance Optimized</h3>
+            <p class="body-text">Lightning-fast load times with 95+ Lighthouse scores. Speed isn't optional — it's a core feature that directly impacts conversions and SEO.</p>
+          </li>
+          <li>
+            <h3 class="benefit-title">Scalable Solutions</h3>
+            <p class="body-text">Built on modern tech stacks that grow with your business. From a single landing page to a full multi-page platform, everything is engineered to scale.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-testimonial" aria-label="Client testimonial">
+      <div class="container">
+        <figure class="testimonial">
+          <blockquote>
+            <p>"Working with Rhythm was seamless. Our new site loads blazing fast and our inquiry rate has noticeably improved."</p>
+          </blockquote>
+          <figcaption>— Arjun Mehta, Startup Founder</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="services-heading" class="section-title">What I Offer</h2>
+          <p class="section-sub">Full-stack web development services designed to help you build, launch, and grow your online presence.</p>
+        </header>
+        <ul class="services-grid">
+          <li class="service-card">
+            <h3 class="service-title">Custom Website Design</h3>
+            <p class="body-text">Pixel-perfect, brand-aligned designs built from scratch. No templates — every layout is tailored to your business goals.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Figma Prototypes</li>
+              <li>Brand Identity</li>
+              <li>Custom UI</li>
+            </ul>
+          </li>
+          <li class="service-card">
+            <h3 class="service-title">Responsive Development</h3>
+            <p class="body-text">Flawless experience across every device — mobile, tablet, laptop, and desktop. Built with clean, semantic HTML and modern CSS.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Mobile-First</li>
+              <li>Cross-Browser</li>
+              <li>Semantic HTML</li>
+            </ul>
+          </li>
+          <li class="service-card">
+            <h3 class="service-title">Fast Loading Speed</h3>
+            <p class="body-text">Optimized assets, lazy loading, and lean code ensure your website loads in under 2 seconds — keeping visitors engaged and Google happy.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>&lt;2s Load Time</li>
+              <li>Lazy Loading</li>
+              <li>95+ Lighthouse</li>
+            </ul>
+          </li>
+          <li class="service-card">
+            <h3 class="service-title">SEO-Friendly Structure</h3>
+            <p class="body-text">On-page SEO built into every page from day one: meta tags, structured data, semantic markup, and Core Web Vitals optimization.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Meta Tags</li>
+              <li>JSON-LD</li>
+              <li>Core Web Vitals</li>
+            </ul>
+          </li>
+          <li class="service-card">
+            <h3 class="service-title">Landing Pages</h3>
+            <p class="body-text">High-converting landing pages engineered to capture leads, drive sign-ups, and maximize your ad spend ROI.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Lead Capture</li>
+              <li>A/B Ready</li>
+              <li>CRO Focused</li>
+            </ul>
+          </li>
+          <li class="service-card">
+            <h3 class="service-title">Website Maintenance</h3>
+            <p class="body-text">Ongoing support, updates, performance monitoring, and content changes — so your website stays fast, secure, and up-to-date.</p>
+            <ul class="tag-list tag-list--muted">
+              <li>Monthly Updates</li>
+              <li>Security Patches</li>
+              <li>Content Changes</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-pricing" id="pricing" aria-labelledby="pricing-heading">
+      <div class="pricing-bg" aria-hidden="true"></div>
+      <div class="container pricing-container">
+        <header class="section-header section-header--center">
+          <h2 id="pricing-heading" class="section-title">Pricing</h2>
+          <p class="pricing-note">Domain &amp; Hosting costs are not included in these prices.</p>
+        </header>
+        <ul class="pricing-list">
+          <li>
+            <article class="pricing-card">
+              <div class="pricing-card-top">
+                <h3 class="pricing-name">Landing Page</h3>
+                <p class="pricing-amount"><span class="price">$199</span></p>
+                <p class="pricing-term">per project</p>
+                <p class="pricing-best">Best for: Startups and individuals who need a stunning single-page presence fast.</p>
+                <a href="#contact" class="btn btn-secondary pricing-cta">Book A Free Call</a>
+              </div>
+              <ul class="pricing-features">
+                <li>1 Scrollable Page</li>
+                <li>Mobile Responsive Design</li>
+                <li>Contact Form Integration</li>
+                <li>Basic SEO Meta Tags</li>
+                <li>2 Revision Rounds</li>
+                <li>7-Day Delivery</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="pricing-card pricing-card--featured">
+              <p class="pricing-badge">Most Popular</p>
+              <div class="pricing-card-top">
+                <h3 class="pricing-name">Business Website</h3>
+                <p class="pricing-amount"><span class="price">$399</span></p>
+                <p class="pricing-term">per project</p>
+                <p class="pricing-best">Best for: Growing businesses that need a professional multi-page digital presence.</p>
+                <a href="#contact" class="btn btn-primary pricing-cta">Book A Free Call</a>
+              </div>
+              <ul class="pricing-features">
+                <li>4–6 Pages (Home, About, Services, Contact…)</li>
+                <li>Mobile Responsive Design</li>
+                <li>Contact Form Integration</li>
+                <li>On-Page SEO Setup</li>
+                <li>Google Analytics Setup</li>
+                <li>3 Revision Rounds</li>
+                <li>10-Day Delivery</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="pricing-card">
+              <div class="pricing-card-top">
+                <h3 class="pricing-name">Full Build</h3>
+                <p class="pricing-amount"><span class="price">$699</span></p>
+                <p class="pricing-term">per project</p>
+                <p class="pricing-best">Best for: Ambitious businesses ready for a full-featured, high-performance digital platform.</p>
+                <a href="#contact" class="btn btn-secondary pricing-cta">Book A Free Call</a>
+              </div>
+              <ul class="pricing-features">
+                <li>7+ Pages or CMS Integration</li>
+                <li>Advanced Animations &amp; Interactions</li>
+                <li>Full SEO Setup (On + Off Page)</li>
+                <li>Google Search Console Setup</li>
+                <li>Third-Party Integrations</li>
+                <li>3 Revision Rounds</li>
+                <li>14-Day Delivery</li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <div class="container container--narrow">
+        <h2 id="faq-heading" class="section-title">FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How long does it take to build a website?</summary>
+            <p class="body-text">Timeline depends on scope. Landing pages typically ship in about 7 days, business sites in around 10 days, and full builds in up to 14 days. Many projects finish within a 3–7 day average when requirements are clear from the start.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will my website work on mobile devices?</summary>
+            <p class="body-text">Yes. Every site is built mobile-first and tested across phones, tablets, laptops, and desktops for a consistent, responsive experience.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I request changes during the project?</summary>
+            <p class="body-text">Absolutely. Each package includes revision rounds (2 for Landing Page, 3 for Business Website and Full Build). I keep the process transparent so feedback is easy to incorporate.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you provide support after launch?</summary>
+            <p class="body-text">Yes. Website maintenance covers updates, performance monitoring, security patches, and content changes. Ongoing support is available so your site stays fast and secure after launch.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What do you need to get started?</summary>
+            <p class="body-text">A short call or email about your goals, any brand assets or copy you have, and examples you like. I handle the technical setup and guide you through anything that's missing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do the prices include domain and hosting?</summary>
+            <p class="body-text">No. Domain and hosting costs are separate from the project prices listed above. I can recommend reliable options and help you connect everything at launch.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-newsletter" aria-labelledby="newsletter-heading">
+      <div class="container container--narrow">
+        <h2 id="newsletter-heading" class="section-title section-title--sm">Newsletter</h2>
+        <p class="body-text">Stay updated with web design tips, website growth strategies, and exclusive updates delivered directly to your inbox.</p>
+        <p class="newsletter-note">No spam — ever.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn-secondary">Subscribe</button>
+        </form>
+        <p class="form-message" id="newsletterMessage" role="status" hidden></p>
+      </div>
+    </section>
+
+    <section class="section section-cta" aria-labelledby="cta-heading">
+      <div class="container container--narrow">
+        <h2 id="cta-heading" class="cta-title">Ready to start your next project?</h2>
+        <p class="lead lead--center">Let's turn your vision into a high-performing digital experience.</p>
+        <p class="cta-action"><a href="#contact" class="btn btn-primary">Book A Free Call</a></p>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Contact</h2>
+        <p class="body-text contact-intro">For new projects, questions, or a quick intro — reach out anytime.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:rhythmsolanki.web@gmail.com">rhythmsolanki.web@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">Phone</span>
+            <a href="tel:+916377450459">+91 6377450459</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Rhythm Solanki</p>
+      <p class="footer-copy">© 2026 Rhythm Solanki. All Rights Reserved. Made in India.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
